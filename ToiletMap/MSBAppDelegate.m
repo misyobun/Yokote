@@ -25,9 +25,7 @@
         // データを取込む
         [[MSBDataImporter sharedDataImporter] import];
     }
-    CLLocation *here = [CLLocation new];
-    // here.coordinate.longitude = (CLLocationDegrees)35.949591;
-    // here.coordinate.latitude = (CLLocationDegrees)136.182136;
+    CLLocation *here = [[CLLocation alloc] initWithLatitude:35.949591 longitude:136.182136];
     [MSBLocation nearestLocationOf:here level:1];
 }
 
