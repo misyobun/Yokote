@@ -24,13 +24,11 @@
 {
 }
 
-/* FIXME:
 - (void)testImportData
 {
     [importer import];
     XCTAssertEqual(1, [[MSBLocation allObjects] count]);
 }
-*/
 
 
 @end

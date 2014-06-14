@@ -26,18 +26,17 @@
     [super tearDown];
 }
 
-/* FIXME:
 - (void)testCanGetCLLocation
 {
     MSBLocation *location = [[MSBLocation allObjects] lastObject];
-    XCTAssertEqual(location.clLocation.coordinate.latitude, 35.949591);
-    XCTAssertEqual(location.clLocation.coordinate.longitude, 136.182136);
+    XCTAssertEqual(35.949591, location.clLocation.coordinate.latitude);
+    XCTAssertEqual(136.182136, location.clLocation.coordinate.longitude);
 }
 
 - (void)testNearestLocationOfNearestLocation
 {
     CLLocation *nearLocation = [[CLLocation alloc] initWithLatitude:35.949591 longitude:136.182136];
-    XCTAssertNotNil([MSBLocation nearestLocationOf:nearLocation level:1]);
+    XCTAssertNotNil([MSBLocation nearestLocationOf:nearLocation level:5]);
 }
 
 - (void)testNearestLocationOfFarLocation
@@ -45,6 +44,20 @@
     CLLocation *farLocation = [[CLLocation alloc] initWithLatitude:36.949591 longitude:136.182136];
     XCTAssertNil([MSBLocation nearestLocationOf:farLocation level:1]);
 }
-*/
+
+- (void)testLevelValue1
+{
+    MSBLocation *location = [MSBLocation create];
+    location.sourceName = @"鯖江市トイレマップ";
+    XCTAssertEqual(1, location.levelValue);
+}
+
+- (void)testLevelValue2
+{
+    MSBLocation *location = [MSBLocation create];
+    location.sourceName = @"鯖江コンビニ情報";
+    XCTAssertEqual(2, location.levelValue);
+}
+
 
 @end

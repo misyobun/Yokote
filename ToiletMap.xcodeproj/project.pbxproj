@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46401115194C47C100A742E9 /* MSBLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E4194C27CA0068A7D6 /* MSBLocationTests.m */; };
+		46401116194C47F200A742E9 /* MSBDataImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E0194C0F230068A7D6 /* MSBDataImporterTests.m */; };
 		46D2648D194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46D2648B194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld */; };
 		46D264D9194C0B610068A7D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D264D8194C0B610068A7D6 /* CoreData.framework */; };
 		46D264DC194C0D2D0068A7D6 /* MSBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264DB194C0D2D0068A7D6 /* MSBLocation.m */; };
 		46D264DF194C0D660068A7D6 /* MSBDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264DE194C0D660068A7D6 /* MSBDataImporter.m */; };
-		46D264E1194C0F230068A7D6 /* MSBDataImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E0194C0F230068A7D6 /* MSBDataImporterTests.m */; };
 		46D264E3194C1E080068A7D6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D264E2194C1E080068A7D6 /* CoreLocation.framework */; };
-		46D264E5194C27CA0068A7D6 /* MSBLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E4194C27CA0068A7D6 /* MSBLocationTests.m */; };
 		46D264E7194C28070068A7D6 /* MSBCoreDataBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E6194C28070068A7D6 /* MSBCoreDataBasedTest.m */; };
 		46D264EA194C37FD0068A7D6 /* DataSource.csv in Resources */ = {isa = PBXBuildFile; fileRef = 46D264E9194C37FD0068A7D6 /* DataSource.csv */; };
 		46D264ED194C38720068A7D6 /* MSBCsvDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264EC194C38720068A7D6 /* MSBCsvDataImporter.m */; };
@@ -313,11 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D264E1194C0F230068A7D6 /* MSBDataImporterTests.m in Sources */,
 				46D264E7194C28070068A7D6 /* MSBCoreDataBasedTest.m in Sources */,
-				46D264E5194C27CA0068A7D6 /* MSBLocationTests.m in Sources */,
 				74D87EDB194C0666002AE86E /* ToiletMapTests.m in Sources */,
 				46D264EF194C38CC0068A7D6 /* MSBCsvDataImporterTest.m in Sources */,
+				46401116194C47F200A742E9 /* MSBDataImporterTests.m in Sources */,
+				46401115194C47C100A742E9 /* MSBLocationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

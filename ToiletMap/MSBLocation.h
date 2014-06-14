@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSString * imageURL;
 @property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSString * sourceName;
+@property (readonly, nonatomic) NSInteger levelValue;
 
 + (NSArray *)allObjects;
 
@@ -27,5 +28,6 @@
 + (MSBLocation *)create;
 
 - (CLLocation *)clLocation;
+
 
 @end
