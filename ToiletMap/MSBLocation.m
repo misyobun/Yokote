@@ -46,7 +46,26 @@
 
 + (MSBLocation *)nearestLocationOf:(CLLocation *)locationFrom level:(NSInteger)level
 {
-    return [[self allObjects] lastObject];
+    MSBLocation *nearestLocation = nil;
+    CLLocationDistance nearestDistance = MAXFLOAT;
+    for (MSBLocation *location in [self allObjects]) {
+        CLLocationDistance distance = [location.clLocation distanceFromLocation:locationFrom];
+        if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestLocation = location;
+        }
+    }
+    if (nearestDistance > NEAR_DISTANCE) {
+        nearestLocation = nil;
+    }
+    return nearestLocation;
 }
+
+- (CLLocation *)clLocation
+{
+    return [[CLLocation alloc] initWithLatitude:[self.latitude doubleValue] longitude:[self.longitude doubleValue]];
+}
+
+
 
 @end
