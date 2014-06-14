@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46D2648D194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46D2648B194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld */; };
+		46D264D9194C0B610068A7D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D264D8194C0B610068A7D6 /* CoreData.framework */; };
 		74D87EAD194C0665002AE86E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D87EAC194C0665002AE86E /* Foundation.framework */; };
 		74D87EAF194C0665002AE86E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D87EAE194C0665002AE86E /* CoreGraphics.framework */; };
 		74D87EB1194C0665002AE86E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D87EB0194C0665002AE86E /* UIKit.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46D2648C194C09C20068A7D6 /* MSBToiletMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MSBToiletMap.xcdatamodel; sourceTree = "<group>"; };
+		46D264D8194C0B610068A7D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		74D87EA9194C0665002AE86E /* ToiletMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D87EAC194C0665002AE86E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74D87EAE194C0665002AE86E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D264D9194C0B610068A7D6 /* CoreData.framework in Frameworks */,
 				74D87EAF194C0665002AE86E /* CoreGraphics.framework in Frameworks */,
 				74D87EB1194C0665002AE86E /* UIKit.framework in Frameworks */,
 				74D87EAD194C0665002AE86E /* Foundation.framework in Frameworks */,
@@ -103,6 +108,7 @@
 		74D87EAB194C0665002AE86E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46D264D8194C0B610068A7D6 /* CoreData.framework */,
 				74D87EAC194C0665002AE86E /* Foundation.framework */,
 				74D87EAE194C0665002AE86E /* CoreGraphics.framework */,
 				74D87EB0194C0665002AE86E /* UIKit.framework */,
@@ -122,6 +128,7 @@
 				74D87EC5194C0665002AE86E /* MSBViewController.m */,
 				74D87EC7194C0666002AE86E /* Images.xcassets */,
 				74D87EB3194C0665002AE86E /* Supporting Files */,
+				46D2648B194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld */,
 			);
 			path = ToiletMap;
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 			files = (
 				74D87EB9194C0665002AE86E /* main.m in Sources */,
 				74D87EBD194C0665002AE86E /* MSBAppDelegate.m in Sources */,
+				46D2648D194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld in Sources */,
 				74D87EC6194C0665002AE86E /* MSBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +479,7 @@
 				74D87EE0194C0666002AE86E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74D87EE1194C0666002AE86E /* Build configuration list for PBXNativeTarget "ToiletMapTests" */ = {
 			isa = XCConfigurationList;
@@ -479,8 +488,22 @@
 				74D87EE3194C0666002AE86E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46D2648B194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46D2648C194C09C20068A7D6 /* MSBToiletMap.xcdatamodel */,
+			);
+			currentVersion = 46D2648C194C09C20068A7D6 /* MSBToiletMap.xcdatamodel */;
+			path = MSBToiletMap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 74D87EA1194C0665002AE86E /* Project object */;
 }
