@@ -7,6 +7,10 @@
 //
 
 #import "MSBAppDelegate.h"
+#import "MSBLocation.h"
+#import "MSBDataImporter.h"
+
+
 
 @implementation MSBAppDelegate
 
@@ -14,9 +18,23 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+- (void)howToUseLocation
+{
+    // データがなかったら
+    if ([[MSBLocation allObjects] count] == 0) {
+        // データを取込む
+        [[MSBDataImporter sharedDataImporter] import];
+    }
+    CLLocation *here = [CLLocation new];
+    // here.coordinate.longitude = (CLLocationDegrees)35.949591;
+    // here.coordinate.latitude = (CLLocationDegrees)136.182136;
+    [MSBLocation nearestLocationOf:here level:1];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+//    [self howToUseLocation];
     return YES;
 }
 							
@@ -74,7 +92,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;
@@ -142,5 +160,26 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+
+
+static NSManagedObjectContext *_currentManagedObjectContext = nil;
+
+
++ (NSManagedObjectContext *)currentManagedObjectContext
+{
+    if (_currentManagedObjectContext) {
+        return _currentManagedObjectContext;
+    } else {
+        MSBAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        return appDelegate.managedObjectContext;
+    }
+}
+
++ (void)setCurrentManagedObjectContext:(NSManagedObjectContext *)context
+{
+    _currentManagedObjectContext = context;
+}
+
 
 @end

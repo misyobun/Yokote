@@ -19,4 +19,8 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
++ (NSManagedObjectContext *)currentManagedObjectContext;
++ (void)setCurrentManagedObjectContext:(NSManagedObjectContext *)context;
+
+
 @end
