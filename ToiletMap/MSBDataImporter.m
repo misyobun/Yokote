@@ -9,6 +9,7 @@
 #import "MSBDataImporter.h"
 #import "MSBAppDelegate.h"
 #import "MSBLocation.h"
+#import "MSBCsvDataImporter.h"
 
 
 @implementation MSBDataImporter
@@ -19,7 +20,7 @@ static MSBDataImporter *sharedDataImporter = nil;
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedDataImporter = [self new];
+        sharedDataImporter = [MSBCsvDataImporter new];
     });
     return sharedDataImporter;
 }
