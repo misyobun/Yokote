@@ -22,6 +22,16 @@
 @dynamic name;
 @dynamic longitude;
 @dynamic imageURL;
+@dynamic address;
+@dynamic sourceName;
+
+
++ (MSBLocation *)create
+{
+    NSManagedObjectContext *context = [MSBAppDelegate currentManagedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MSBLocation" inManagedObjectContext:context];
+    return [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+}
 
 + (NSArray *)allObjects
 {
@@ -49,10 +59,12 @@
     MSBLocation *nearestLocation = nil;
     CLLocationDistance nearestDistance = MAXFLOAT;
     for (MSBLocation *location in [self allObjects]) {
-        CLLocationDistance distance = [location.clLocation distanceFromLocation:locationFrom];
-        if (distance < nearestDistance) {
-            nearestDistance = distance;
-            nearestLocation = location;
+        if (location.levelValue <= level) {
+            CLLocationDistance distance = [location.clLocation distanceFromLocation:locationFrom];
+            if (distance < nearestDistance) {
+                nearestDistance = distance;
+                nearestLocation = location;
+            }
         }
     }
     if (nearestDistance > NEAR_DISTANCE) {
@@ -66,6 +78,18 @@
     return [[CLLocation alloc] initWithLatitude:[self.latitude doubleValue] longitude:[self.longitude doubleValue]];
 }
 
+- (NSInteger)levelValue
+{
+    NSArray *level1Sources = @[@"鯖江市トイレマップ"];
+    NSArray *level2Sources = @[@"鯖江コンビニ情報"];
+    if ([level1Sources indexOfObject:self.sourceName] != NSNotFound) {
+        return 1;
+    }
+    if ([level2Sources indexOfObject:self.sourceName] != NSNotFound) {
+        return 2;
+    }
+    return 5;
+}
 
 
 @end
