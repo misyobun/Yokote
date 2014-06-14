@@ -15,6 +15,9 @@
 		46D264E3194C1E080068A7D6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D264E2194C1E080068A7D6 /* CoreLocation.framework */; };
 		46D264E5194C27CA0068A7D6 /* MSBLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E4194C27CA0068A7D6 /* MSBLocationTests.m */; };
 		46D264E7194C28070068A7D6 /* MSBCoreDataBasedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264E6194C28070068A7D6 /* MSBCoreDataBasedTest.m */; };
+		46D264EA194C37FD0068A7D6 /* DataSource.csv in Resources */ = {isa = PBXBuildFile; fileRef = 46D264E9194C37FD0068A7D6 /* DataSource.csv */; };
+		46D264ED194C38720068A7D6 /* MSBCsvDataImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264EC194C38720068A7D6 /* MSBCsvDataImporter.m */; };
+		46D264EF194C38CC0068A7D6 /* MSBCsvDataImporterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D264EE194C38CC0068A7D6 /* MSBCsvDataImporterTest.m */; };
 		74D87EAD194C0665002AE86E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D87EAC194C0665002AE86E /* Foundation.framework */; };
 		74D87EAF194C0665002AE86E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D87EAE194C0665002AE86E /* CoreGraphics.framework */; };
 		74D87EB1194C0665002AE86E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D87EB0194C0665002AE86E /* UIKit.framework */; };
@@ -54,6 +57,11 @@
 		46D264E4194C27CA0068A7D6 /* MSBLocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBLocationTests.m; sourceTree = "<group>"; };
 		46D264E6194C28070068A7D6 /* MSBCoreDataBasedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBCoreDataBasedTest.m; sourceTree = "<group>"; };
 		46D264E8194C28410068A7D6 /* MSBCoreDataBasedTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSBCoreDataBasedTest.h; sourceTree = "<group>"; };
+		46D264E9194C37FD0068A7D6 /* DataSource.csv */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = text; lineEnding = 0; path = DataSource.csv; sourceTree = "<group>"; };
+		46D264EB194C38720068A7D6 /* MSBCsvDataImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBCsvDataImporter.h; sourceTree = "<group>"; };
+		46D264EC194C38720068A7D6 /* MSBCsvDataImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBCsvDataImporter.m; sourceTree = "<group>"; };
+		46D264EE194C38CC0068A7D6 /* MSBCsvDataImporterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBCsvDataImporterTest.m; sourceTree = "<group>"; };
+		46D264F0194C3BB60068A7D6 /* MSBToiletMap 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MSBToiletMap 2.xcdatamodel"; sourceTree = "<group>"; };
 		74D87EA9194C0665002AE86E /* ToiletMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToiletMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D87EAC194C0665002AE86E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74D87EAE194C0665002AE86E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +145,7 @@
 		74D87EB2194C0665002AE86E /* ToiletMap */ = {
 			isa = PBXGroup;
 			children = (
+				46D264E9194C37FD0068A7D6 /* DataSource.csv */,
 				74D87EBB194C0665002AE86E /* MSBAppDelegate.h */,
 				74D87EBC194C0665002AE86E /* MSBAppDelegate.m */,
 				74D87EBE194C0665002AE86E /* Main_iPhone.storyboard */,
@@ -150,6 +159,8 @@
 				46D264DB194C0D2D0068A7D6 /* MSBLocation.m */,
 				46D264DD194C0D660068A7D6 /* MSBDataImporter.h */,
 				46D264DE194C0D660068A7D6 /* MSBDataImporter.m */,
+				46D264EB194C38720068A7D6 /* MSBCsvDataImporter.h */,
+				46D264EC194C38720068A7D6 /* MSBCsvDataImporter.m */,
 			);
 			path = ToiletMap;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 			children = (
 				74D87EDA194C0666002AE86E /* ToiletMapTests.m */,
 				46D264E6194C28070068A7D6 /* MSBCoreDataBasedTest.m */,
+				46D264EE194C38CC0068A7D6 /* MSBCsvDataImporterTest.m */,
 				46D264E8194C28410068A7D6 /* MSBCoreDataBasedTest.h */,
 				74D87ED5194C0666002AE86E /* Supporting Files */,
 				46D264E0194C0F230068A7D6 /* MSBDataImporterTests.m */,
@@ -264,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D264EA194C37FD0068A7D6 /* DataSource.csv in Resources */,
 				74D87EC3194C0665002AE86E /* Main_iPad.storyboard in Resources */,
 				74D87EC8194C0666002AE86E /* Images.xcassets in Resources */,
 				74D87EC0194C0665002AE86E /* Main_iPhone.storyboard in Resources */,
@@ -288,6 +301,7 @@
 			files = (
 				46D264DC194C0D2D0068A7D6 /* MSBLocation.m in Sources */,
 				74D87EB9194C0665002AE86E /* main.m in Sources */,
+				46D264ED194C38720068A7D6 /* MSBCsvDataImporter.m in Sources */,
 				46D264DF194C0D660068A7D6 /* MSBDataImporter.m in Sources */,
 				74D87EBD194C0665002AE86E /* MSBAppDelegate.m in Sources */,
 				46D2648D194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld in Sources */,
@@ -303,6 +317,7 @@
 				46D264E7194C28070068A7D6 /* MSBCoreDataBasedTest.m in Sources */,
 				46D264E5194C27CA0068A7D6 /* MSBLocationTests.m in Sources */,
 				74D87EDB194C0666002AE86E /* ToiletMapTests.m in Sources */,
+				46D264EF194C38CC0068A7D6 /* MSBCsvDataImporterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,9 +541,10 @@
 		46D2648B194C09C20068A7D6 /* MSBToiletMap.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				46D264F0194C3BB60068A7D6 /* MSBToiletMap 2.xcdatamodel */,
 				46D2648C194C09C20068A7D6 /* MSBToiletMap.xcdatamodel */,
 			);
-			currentVersion = 46D2648C194C09C20068A7D6 /* MSBToiletMap.xcdatamodel */;
+			currentVersion = 46D264F0194C3BB60068A7D6 /* MSBToiletMap 2.xcdatamodel */;
 			path = MSBToiletMap.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

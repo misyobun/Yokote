@@ -19,7 +19,7 @@
     context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     context.parentContext = masterContext;
     [MSBAppDelegate setCurrentManagedObjectContext:context];
-    importer = [MSBDataImporter sharedDataImporter];
+    importer = [MSBDataImporter new];
 }
 
 - (void)tearDown

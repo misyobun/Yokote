@@ -22,6 +22,16 @@
 @dynamic name;
 @dynamic longitude;
 @dynamic imageURL;
+@dynamic address;
+@dynamic sourceName;
+
+
++ (MSBLocation *)create
+{
+    NSManagedObjectContext *context = [MSBAppDelegate currentManagedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MSBLocation" inManagedObjectContext:context];
+    return [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+}
 
 + (NSArray *)allObjects
 {

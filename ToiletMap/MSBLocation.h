@@ -17,10 +17,14 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSString * imageURL;
+@property (nonatomic, retain) NSString * address;
+@property (nonatomic, retain) NSString * sourceName;
 
 + (NSArray *)allObjects;
 
 + (MSBLocation *)nearestLocationOf:(CLLocation *)locationFrom level:(NSInteger)level;
+
++ (MSBLocation *)create;
 
 - (CLLocation *)clLocation;
 
