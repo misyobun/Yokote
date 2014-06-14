@@ -6,19 +6,10 @@
 //  Copyright (c) 2014年 misyobun. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import "MSBAppDelegate.h"
-#import "MSBDataImporter.h"
-#import "MSBLocation.h"
+#import "MSBCoreDataBasedTest.h"
 
 
-@interface MSBDataImporterTests : XCTestCase
-{
-    MSBAppDelegate *appDelegate;
-    NSManagedObjectContext *masterContext;
-    NSManagedObjectContext *context;
-    MSBDataImporter *importer;
-}
+@interface MSBDataImporterTests : MSBCoreDataBasedTest
 
 @end
 
@@ -27,28 +18,18 @@
 - (void)setUp
 {
     [super setUp];
-
-    appDelegate = [[UIApplication sharedApplication] delegate];
-    masterContext = appDelegate.managedObjectContext;
-    context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    context.parentContext = masterContext;
-    [MSBAppDelegate setCurrentManagedObjectContext:context];
-    importer = [MSBDataImporter sharedDataImporter];
 }
 
 - (void)tearDown
 {
-    [context rollback];
-    context = nil;
-    [MSBAppDelegate setCurrentManagedObjectContext:nil];
-    [masterContext rollback];
-    [super tearDown];
 }
 
-- (void)testExample
+- (void)testImportData
 {
     [importer import];
     XCTAssertEqual(1, [[MSBLocation allObjects] count]);
 }
+
+
 
 @end

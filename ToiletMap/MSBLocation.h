@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#define NEAR_DISTANCE   100 // m
 
 @interface MSBLocation : NSManagedObject
 
@@ -20,5 +21,7 @@
 + (NSArray *)allObjects;
 
 + (MSBLocation *)nearestLocationOf:(CLLocation *)locationFrom level:(NSInteger)level;
+
+- (CLLocation *)clLocation;
 
 @end
