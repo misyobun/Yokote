@@ -45,10 +45,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testImportData
 {
     [importer import];
     XCTAssertEqual(1, [[MSBLocation allObjects] count]);
 }
+
+
 
 @end
